@@ -1,8 +1,20 @@
-# vue-kindeditor
-vue kindeditor plugin
+# 演示
 
+```bash
+git clone https://github.com/ff755/vue-kindeditor.git
+```
 
+```bash
+cd vue-kindeditor
+```
 
+```bash
+npm install 
+```
+
+```bash
+npm run dev 
+```
 [编辑器初始化参数](http://kindeditor.net/docs/option.html)
 
 # vue-kindeditor
