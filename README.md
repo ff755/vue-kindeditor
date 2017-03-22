@@ -9,7 +9,7 @@ cd vue-kindeditor
 ```
 
 ```bash
-npm install 
+yarn install 
 ```
 
 ```bash
@@ -30,7 +30,7 @@ MIT License
 ## Install
 
 ```bash
-yarn add https://github.com/ff755/vue-kindeditor.git --save-dev
+yarn add vue-kindeditor --save-dev
 ```
 
 ## Usage
