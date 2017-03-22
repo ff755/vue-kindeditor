@@ -1,7 +1,0 @@
-{
-    "name": "gazira-kindeditor",
-    "version": "4.1.10",
-    "main": "kindeditor-all.js",
-    "dependencies": {
-    }
-}
