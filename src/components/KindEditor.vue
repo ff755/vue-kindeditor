@@ -193,7 +193,7 @@ export default {
       type: Function
     },
     uploadJson: {
-      type: Function
+      type: String
     },
     fileManagerJson: {
       type: Function
