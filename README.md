@@ -13,7 +13,7 @@ yarn install
 ```
 
 ```bash
-npm run dev 
+yarn run dev 
 ```
 [编辑器初始化参数](http://kindeditor.net/docs/option.html)
 
@@ -30,7 +30,7 @@ MIT License
 ## Install
 
 ```bash
-yarn add vue-kindeditor --save-dev
+yarn add vue-kindeditor
 ```
 
 ## Usage
