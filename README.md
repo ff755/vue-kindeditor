@@ -1,22 +1,3 @@
-# 演示
-
-```bash
-git clone https://github.com/ff755/vue-kindeditor.git
-```
-
-```bash
-cd vue-kindeditor
-```
-
-```bash
-yarn install 
-```
-
-```bash
-yarn run dev 
-```
-[编辑器初始化参数](http://kindeditor.net/docs/option.html)
-
 # vue-kindeditor
 
 依赖
@@ -107,3 +88,5 @@ export default {
 }
 </style>
 ```
+[vue-kindeditor使用帮助](https://github.com/ff755/vue-kindedtior-demo)
+[编辑器初始化参数](http://kindeditor.net/docs/option.html)
