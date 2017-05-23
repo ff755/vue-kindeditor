@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "kindeditor": "^4.1.10",
-    "vue": "^2.2.2"
+    "vue": "^2.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

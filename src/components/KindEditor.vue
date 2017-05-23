@@ -1,6 +1,6 @@
 <template>
   <div class="kindeditor">
-    <textarea :id="id" name="content" content="outContent"></textarea>
+    <textarea :id="id" name="content">{{ outContent }}</textarea>
   </div>
 </template>
 
@@ -9,6 +9,7 @@ export default {
   name: 'kindeditor',
   data () {
     return {
+      editor: null,
       outContent: this.content
     }
   },
@@ -279,15 +280,16 @@ export default {
   },
   watch: {
     content (val) {
-      this.outContent = val
+      this.editor && val !== this.outContent && this.editor.html(val)
     },
     outContent (val) {
+      this.$emit('update:content', val)
       this.$emit('on-content-change', val)
     }
   },
   mounted () {
     var _this = this
-    window.editor = window.KindEditor.create('#' + this.id, {
+    _this.editor = window.KindEditor.create('#' + this.id, {
       width: _this.width,
       height: _this.height,
       minWidth: _this.minWidth,
