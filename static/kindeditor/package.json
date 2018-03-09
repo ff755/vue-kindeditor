@@ -1,0 +1,31 @@
+{
+  "name": "kindeditor",
+  "version": "4.1.10",
+  "filename": "kindeditor",
+  "main": "kindeditor-all.js",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-compress": "~0.5.3"
+  },
+  "description": "WYSIWYG HTML editor",
+  "keywords": [
+    "WYSIWYG",
+    "editor"
+  ],
+  "spm": {
+    "main": "kindeditor-all.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "tests": "",
+    "ignore": [
+      "components",
+      "dist",
+      "spm_modules"
+    ],
+    "buildArgs": ""
+  },
+  "_from": "kindeditor@4.1.10",
+  "_resolved": "http://registry.npm.taobao.org/kindeditor/download/kindeditor-4.1.10.tgz"
+}
