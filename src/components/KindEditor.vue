@@ -346,7 +346,7 @@ export default {
         colorTable: _this.colorTable,
         afterCreate: _this.afterCreate,
         afterChange: function () {
-          console.log(_this.afterChange)
+          // console.log(_this.afterChange)
           _this.outContent = this.html()
         },
         afterTab: _this.afterTab,
