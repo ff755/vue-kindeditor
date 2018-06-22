@@ -326,7 +326,7 @@ export default {
         designMode: _this.designMode,
         fullscreenMode: _this.fullscreenMode,
         basePath: _this.basePath,
-        themesPath: _this.cssPath,
+        themesPath: _this.themesPath,
         pluginsPath: _this.pluginsPath,
         langPath: _this.langPath,
         minChangeSize: _this.minChangeSize,
