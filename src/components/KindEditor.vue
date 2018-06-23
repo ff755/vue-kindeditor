@@ -326,7 +326,7 @@ export default {
         designMode: _this.designMode,
         fullscreenMode: _this.fullscreenMode,
         basePath: _this.basePath,
-        themesPath: _this.cssPath,
+        themesPath: _this.themesPath,
         pluginsPath: _this.pluginsPath,
         langPath: _this.langPath,
         minChangeSize: _this.minChangeSize,
@@ -346,7 +346,7 @@ export default {
         colorTable: _this.colorTable,
         afterCreate: _this.afterCreate,
         afterChange: function () {
-          console.log(_this.afterChange)
+          // console.log(_this.afterChange)
           _this.outContent = this.html()
         },
         afterTab: _this.afterTab,
