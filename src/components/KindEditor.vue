@@ -197,7 +197,7 @@ export default {
       type: String
     },
     fileManagerJson: {
-      type: Function
+      type: String
     },
     allowPreviewEmoticons: {
       type: Boolean,
@@ -242,9 +242,9 @@ export default {
       default: false
     },
     extraFileUploadParams: {
-      type: Array,
+      type: Object,
       default: function () {
-        return []
+        return {}
       }
     },
     filePostName: {
@@ -346,7 +346,6 @@ export default {
         colorTable: _this.colorTable,
         afterCreate: _this.afterCreate,
         afterChange: function () {
-          // console.log(_this.afterChange)
           _this.outContent = this.html()
         },
         afterTab: _this.afterTab,
