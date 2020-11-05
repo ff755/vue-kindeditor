@@ -1,4 +1,5 @@
 # vue-kindeditor
+在原项目基础上添加auth验证
 
 依赖
 vue 2
