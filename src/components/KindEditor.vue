@@ -11,9 +11,14 @@ export default {
     return {
       editor: null,
       outContent: this.content
+
     }
   },
   props: {
+   header:{
+     type:Object,
+     default:{}
+   },
     content: {
       type: String,
       default: ''
@@ -311,6 +316,7 @@ export default {
       var _this = this
       _this.removeEditor()
       _this.editor = window.KindEditor.create('#' + this.id, {
+        header:_this.header,
         width: _this.width,
         height: _this.height,
         minWidth: _this.minWidth,
