@@ -1,5 +1,31 @@
 # vue-kindeditor
-在原项目基础上添加auth验证
+
+2020/12/30 更新
+props 增加 header，结构为对象
+作用：可增加header，后端验证，防止上传接口被攻击
+
+示例：
+```
+<editor id="editor_id" height="500px" width="700px" :content="editorText"
+            pluginsPath="/static/kindeditor/plugins/"
+            :loadStyleMode="false"
+            @on-content-change="onContentChange"
+            :header="header"></editor>
+
+```
+参数格式：```header: { key: value }```
+
+需修改kindeditor-all.js
+kindeditor-all.js文件的4539行，修改了_ajax函数，添加了header.
+6909行
+```
+var header=self.header;
+K.ajax(K.addParam(fileManagerJson,param + '&' + new Date().getTime()), function(data) {
+  dialog.hideLoading();
+  func(data);
+},header);
+```
+此功能由用户 @liqz2009 提供
 
 依赖
 vue 2
@@ -109,7 +135,7 @@ export default {
 ## 演示
 [我是demo](https://github.com/ff755/vue-kindedtior-demo)
 
-## 最近更新 
+## 最近更新
 重新打包。
 
 ## 常见问题
