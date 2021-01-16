@@ -16,8 +16,8 @@ export default {
   },
   props: {
    header:{
-     type:Object,
-     default:{}
+     type: Object,
+     default: () => ({})
    },
     content: {
       type: String,

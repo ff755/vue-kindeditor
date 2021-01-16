@@ -1,5 +1,7 @@
 # vue-kindeditor
 
+2021/01/17 修复，当未设置header参数时报错
+
 2020/12/30 更新
 props 增加 header，结构为对象
 作用：可增加header，后端验证，防止上传接口被攻击
