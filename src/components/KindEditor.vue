@@ -7,18 +7,21 @@
 <script>
 export default {
   name: 'kindeditor-component',
-  data () {
+  data() {
     return {
       editor: null,
       outContent: this.content
-
     }
   },
   props: {
-   header:{
-     type: Object,
-     default: () => ({})
-   },
+    isReadonly: {
+      type: Boolean,
+      default: false
+    },
+    header: {
+      type: Object,
+      default: () => ({})
+    },
     content: {
       type: String,
       default: ''
@@ -168,7 +171,7 @@ export default {
       default: '\t'
     },
     cssPath: {
-      type: [ String, Array ]
+      type: [String, Array]
     },
     cssData: {
       type: String
@@ -284,15 +287,18 @@ export default {
     }
   },
   watch: {
-    content (val) {
+    content(val) {
       this.editor && val !== this.outContent && this.editor.html(val)
     },
-    outContent (val) {
+    outContent(val) {
       this.$emit('update:content', val)
       this.$emit('on-content-change', val)
+    },
+    isReadonly(val) {
+      this.editor.readonly(val)
     }
   },
-  mounted () {
+  mounted() {
     // 初始访问时创建
     this.initEditor()
   },
@@ -300,23 +306,23 @@ export default {
    * keep-alive 会用到进入时调用activated 离开时调用deactivated
    * 初始访问 created、mounted 切换时deactivated 再次进入时 activated
    */
-  activated () {
+  activated() {
     // keep-alive 进入时创建
     this.initEditor()
   },
-  deactivated () {
+  deactivated() {
     // keep-alive 离开时移除
     this.removeEditor()
   },
   methods: {
-    removeEditor () {
+    removeEditor() {
       window.KindEditor.remove('#' + this.id)
     },
-    initEditor () {
+    initEditor() {
       var _this = this
       _this.removeEditor()
       _this.editor = window.KindEditor.create('#' + this.id, {
-        header:_this.header,
+        header: _this.header,
         width: _this.width,
         height: _this.height,
         minWidth: _this.minWidth,
