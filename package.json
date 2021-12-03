@@ -1,7 +1,7 @@
 {
   "name": "vue-kindeditor",
   "description": "vue kindeditor plugin",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "author": "FF <ff755@outlook.com>",
   "license": "MIT",
   "main": "dist/vue-kindeditor.js",
